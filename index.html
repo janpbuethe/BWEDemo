@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Official demo page for the paper "A lightweight and robust method for wideband-to-fullband extension of speech"</title>
+    <style>
+        article {
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4em;
+        }
+        html {
+            box-sizing: border-box;
+            font-family: "Source Sans", "Verdana", "Calibri", sans-serif;
+            padding: 2em;
+        }
+        td {
+            padding: 3px 7px;
+            text-align: center;
+        }
+        td:first-child {
+            text-align: end;
+        }
+        th {
+            background: #ff9900;
+            color: #000;
+            font-size: 1.2em;
+            padding: 7px 7px;
+        }
+    </style>
+</head>
+<body>
+<h1>Official demo page for the paper "A lightweight and robust method for wideband-to-fullband extension of speech"</h1>
+<article>
+            
+<div>
+    <p>
+        This demo page highlights applications of the proposed bandwidth extension method both in the coding and vocoding context. The demo samples were extracted from the <a href="https://github.com/facebookresearch/ears_dataset">EARS dataset</a> which is licensed under the <a href="https://github.com/facebookresearch/ears_dataset/blob/main/LICENSE">CC-NC 4.0 International license</a>. It is recommended to listen with reasonably good headphones.
+    </p>          
+</div>
+<div>	<h2>Coded Speech at 12kb/s</h2>
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>Reference</th>
+			<th>Opus 1.5</th>
+			<th>Opus 1.5 + BWE</th>
+			<th>EnCodec</th>
+			<th>AudioDec @ 12.8 kb/s</th>
+			<th>Opus 1.4 @ 18 kb/s</th>
+		</tr>
+		<tr>
+			<td>f1</td>
+			<td><audio controls> <source src="items/orig48/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_12000_dc10/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_12000_dc10/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_12000/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/audiodec_12800/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_fb_18000_dc0/p018_f_15.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f2</td>
+			<td><audio controls> <source src="items/orig48/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_12000_dc10/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_12000_dc10/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_12000/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/audiodec_12800/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_fb_18000_dc0/p041_f_23.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f3</td>
+			<td><audio controls> <source src="items/orig48/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_12000_dc10/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_12000_dc10/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_12000/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/audiodec_12800/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_fb_18000_dc0/p050_f_22.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m1</td>
+			<td><audio controls> <source src="items/orig48/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_12000_dc10/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_12000_dc10/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_12000/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/audiodec_12800/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_fb_18000_dc0/p009_m_16.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m2</td>
+			<td><audio controls> <source src="items/orig48/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_12000_dc10/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_12000_dc10/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_12000/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/audiodec_12800/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_fb_18000_dc0/p071_m_01.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m3</td>
+			<td><audio controls> <source src="items/orig48/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_12000_dc10/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_12000_dc10/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_12000/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/audiodec_12800/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_fb_18000_dc0/p031_m_17.wav"> </audio></td>
+		</tr>
+	</table>
+
+</div><div>	<h2>Coded Speech at 9kb/s</h2>
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>Reference</th>
+			<th>Opus 1.5</th>
+			<th>Opus 1.5 + BWE</th>
+			<th>EVS @ 9.6kb/s</th>
+		</tr>
+		<tr>
+			<td>f1</td>
+			<td><audio controls> <source src="items/orig48/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_9000_dc10/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_9000_dc10/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/evs_fb_9600/p018_f_15.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f2</td>
+			<td><audio controls> <source src="items/orig48/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_9000_dc10/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_9000_dc10/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/evs_fb_9600/p041_f_23.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f3</td>
+			<td><audio controls> <source src="items/orig48/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_9000_dc10/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_9000_dc10/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/evs_fb_9600/p050_f_22.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m1</td>
+			<td><audio controls> <source src="items/orig48/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_9000_dc10/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_9000_dc10/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/evs_fb_9600/p009_m_16.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m2</td>
+			<td><audio controls> <source src="items/orig48/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_9000_dc10/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_9000_dc10/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/evs_fb_9600/p071_m_01.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m3</td>
+			<td><audio controls> <source src="items/orig48/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_9000_dc10/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_9000_dc10/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/evs_fb_9600/p031_m_17.wav"> </audio></td>
+		</tr>
+	</table>
+
+</div><div>	<h2>Coded Speech at 6kb/s</h2>
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>Reference</th>
+			<th>Opus 1.5</th>
+			<th>Opus 1.5 + BWE</th>
+			<th>EnCodec</th>
+		</tr>
+		<tr>
+			<td>f1</td>
+			<td><audio controls> <source src="items/orig48/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_6000_dc10/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_6000_dc10/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_6000/p018_f_15.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f2</td>
+			<td><audio controls> <source src="items/orig48/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_6000_dc10/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_6000_dc10/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_6000/p041_f_23.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f3</td>
+			<td><audio controls> <source src="items/orig48/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_6000_dc10/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_6000_dc10/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_6000/p050_f_22.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m1</td>
+			<td><audio controls> <source src="items/orig48/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_6000_dc10/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_6000_dc10/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_6000/p009_m_16.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m2</td>
+			<td><audio controls> <source src="items/orig48/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_6000_dc10/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_6000_dc10/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_6000/p071_m_01.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m3</td>
+			<td><audio controls> <source src="items/orig48/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_wb_6000_dc10/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/opus_nbwe_6000_dc10/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/encodec_6000/p031_m_17.wav"> </audio></td>
+		</tr>
+	</table>
+
+</div><div>	<h2>Uncoded Speech</h2>
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>Reference</th>
+			<th>8kHz lowpass</th>
+			<th>8kHz lowpass + BWE</th>
+		</tr>
+		<tr>
+			<td>f1</td>
+			<td><audio controls> <source src="items/orig48/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig_wb/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig16_nbwe/p018_f_15.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f2</td>
+			<td><audio controls> <source src="items/orig48/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig_wb/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig16_nbwe/p041_f_23.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f3</td>
+			<td><audio controls> <source src="items/orig48/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig_wb/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig16_nbwe/p050_f_22.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m1</td>
+			<td><audio controls> <source src="items/orig48/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig_wb/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig16_nbwe/p009_m_16.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m2</td>
+			<td><audio controls> <source src="items/orig48/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig_wb/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig16_nbwe/p071_m_01.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m3</td>
+			<td><audio controls> <source src="items/orig48/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig_wb/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/orig16_nbwe/p031_m_17.wav"> </audio></td>
+		</tr>
+	</table>
+
+</div><div>	<h2>Low-complexity vocoders</h2>
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>Reference</th>
+			<th>LPCNet</th>
+			<th>LPCNet + BWE</th>
+			<th>FARGAN</th>
+			<th>FARGAN + BWE</th>
+		</tr>
+		<tr>
+			<td>f1</td>
+			<td><audio controls> <source src="items/orig48/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet_nbwe/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan/p018_f_15.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan_nbwe/p018_f_15.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f2</td>
+			<td><audio controls> <source src="items/orig48/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet_nbwe/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan/p041_f_23.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan_nbwe/p041_f_23.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>f3</td>
+			<td><audio controls> <source src="items/orig48/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet_nbwe/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan/p050_f_22.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan_nbwe/p050_f_22.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m1</td>
+			<td><audio controls> <source src="items/orig48/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet_nbwe/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan/p009_m_16.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan_nbwe/p009_m_16.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m2</td>
+			<td><audio controls> <source src="items/orig48/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet_nbwe/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan/p071_m_01.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan_nbwe/p071_m_01.wav"> </audio></td>
+		</tr>
+		<tr>
+			<td>m3</td>
+			<td><audio controls> <source src="items/orig48/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/lpcnet_nbwe/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan/p031_m_17.wav"> </audio></td>
+			<td><audio controls> <source src="items/fargan_nbwe/p031_m_17.wav"> </audio></td>
+		</tr>
+	</table>
+
+</div>
+</article>
+</body>
+</html>
+            
